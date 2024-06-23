@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --MODERATEVIOLET: hsl(263, 55%, 52%);
+  --VERYDARKGRAYISHBLUE: hsl(217, 19%, 35%);
+  --VERYDARKBLACKISHBLUE: hsl(219, 29%, 14%);
+  --WHITE: hsl(0, 0%, 100%);
+
+  --LIGHTGRAY: hsl(0, 0%, 81%);
+  --LIGHTGRAYISHBLUE: hsl(210, 46%, 95%);
+}
+
+body {
+  background-color: var(--LIGHTGRAYISHBLUE);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+main {
+  margin: 5rem 2rem;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card-daniel {
+  background-color: var(--MODERATEVIOLET);
+  color: var(--WHITE);
+  margin-bottom: 2rem;
+  background: url(../images/bg-pattern-quotation.svg) no-repeat
+    var(--MODERATEVIOLET);
+  background-position: top right 10%;
+}
+
+.card-jonathan {
+  background-color: var(--VERYDARKGRAYISHBLUE);
+  color: var(--WHITE);
+  margin-bottom: 2rem;
+}
+.card-jeanette {
+  background-color: var(--WHITE);
+  color: var(--VERYDARKGRAYISHBLUE);
+  margin-bottom: 2rem;
+}
+.card-patrick {
+  background-color: var(--VERYDARKBLACKISHBLUE);
+  color: var(--WHITE);
+  margin-bottom: 2rem;
+}
+.card-kira {
+  background-color: var(--WHITE);
+  color: var(--VERYDARKGRAYISHBLUE);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+header img {
+  border-radius: 50%;
+  max-width: 35px;
+}
+
+header .graduate {
+  opacity: 50%;
+}
+
+section p {
+  opacity: 70%;
+  line-height: 1.4;
+}
+
+section h3 {
+  margin-bottom: 1.4rem;
+}
+
+@media (min-width: 750px) {
+  main {
+    display: grid;
+    grid-template-columns: minmax(250px, auto) minmax(250px, auto);
+    gap: 2rem;
+  }
+  .card-daniel {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .card-jonathan {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .card-jeanette {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .card-patrick {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .card-kira {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+
+    margin: 8rem;
+  }
+  .card-daniel {
+    grid-area: 1 / 1 / 2 / 3;
+    margin: 0;
+  }
+  .card-jonathan {
+    grid-area: 1 / 3 / 2 / 4;
+    margin: 0;
+  }
+  .card-jeanette {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .card-patrick {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+  .card-kira {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+}
